@@ -1,0 +1,24 @@
+ .item{
+
+     display: flex;
+   margin-left: 20px;
+   border: 1px solid blue;
+   padding: 5px;
+     align-items: center;
+     color:#fff;
+   max-width: 400px;
+   border-radius: 20px;
+     margin-bottom: 20px;
+
+        img{
+            width: 60px;
+            border-radius: 50%;
+            height: 60px;
+            margin-right: 20px;
+        }
+     .itemDetails{
+       display: flex;
+       flex-direction: column;
+     }
+    }
+

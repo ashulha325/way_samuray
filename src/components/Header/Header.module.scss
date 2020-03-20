@@ -1,0 +1,17 @@
+.header{
+    grid-area: h;
+    display:flex;
+    justify-content: space-around;
+    background-color: cadetblue;
+    align-items: center;
+    img {
+        height: 60px;
+    }
+    span{
+        margin-right: 100px;
+        color:greenyellow;
+        font-size: 20px;
+
+    }
+}
+

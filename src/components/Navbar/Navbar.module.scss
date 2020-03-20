@@ -1,0 +1,28 @@
+.nav{
+  grid-area: n;
+  background-color: aquamarine;
+  height: 265px;
+      div {
+        text-align: center;
+        border: 1px solid cadetblue;
+        :hover {
+          background-color: darkgrey;
+          transition: .2s;
+        }
+
+        a {
+          display: block;
+          width: 100%;
+          height: 100%;
+          text-decoration: none;
+          color: black;
+          font-size: 18px;
+          padding-top: 15px;
+          padding-bottom: 15px;
+          &.active{
+            background: red;
+          }
+
+        }
+      }
+}

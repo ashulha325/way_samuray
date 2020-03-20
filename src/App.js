@@ -1,30 +1,30 @@
 import React from "react";
+import { Route } from "react-router-dom";
+import Header from "./components/Header/Header";
+import Navbar from "./components/Navbar/Navbar";
+import Profile from "./components/Profile/Profile";
+import Music from './components/Music/Music'
+import Settings from './components/Settings/Settings'
 import "./App.css";
+import DialogsContainer from "./components/Dialogs/DialogsContainer";
+import UsersContainer from "./components/Users/UsersContainer";
 
-const App = () => {
+const App = (props) => {
+
   return (
-    <div className="App">
-      <Header />
-      <SecondName />
-    </div>
-  );
-};
-const Header = () => {
-  return (
-    <div className="Header">
-      <ul>
-        <li>Andriy</li>
-      </ul>
-    </div>
-  );
-};
-const SecondName = () => {
-  return (
-    <div className="Header">
-      <ul>
-        <li>Shulha</li>
-      </ul>
-    </div>
+
+      <div className="app-wrapper">
+            <Header />
+            <Navbar />
+        <div className="app-wrapper-content">
+            <Route path="/profile" render={ () => <Profile  /> } />
+            <Route path="/dialogs" render={ () => <DialogsContainer  /> } />
+            <Route path="/users" render={ () => <UsersContainer/> } />
+            <Route path="/music" render={ () => <Music/> } />
+            <Route path="/settings" render={ () => <Settings/> } />
+        </div>
+      </div>
+
   );
 };
 export default App;

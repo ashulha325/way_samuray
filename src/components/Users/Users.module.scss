@@ -1,0 +1,21 @@
+.Users{
+display: flex;
+max-width: 400px;
+  justify-content: space-around;
+  align-items: center;
+  .UsersDetail{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    border:1px solid #ff0000;
+    text-align: center;
+
+  }
+}
+.UsersDetailLocation{
+  display: flex;
+  flex-direction: column;
+}
+.Photourl{
+  width:100px;
+}
