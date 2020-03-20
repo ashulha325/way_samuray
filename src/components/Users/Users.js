@@ -49,8 +49,8 @@ let Users = props => {
                 <span>{user.status}</span>
                 {
                     user.followed
-                    ? <button onClick={ () => props.unfollow(user.id)}> Unfollow </button>
-                    : <button onClick={ () => props.follow(user.id)}> Follow </button>
+                    ? <button onClick={ () => props.unfollow(user.id)}> Unfollow! </button>
+                    : <button onClick={ () => props.follow(user.id)}> Follow! </button>
                 }
 
             </div>
