@@ -1,13 +1,11 @@
 import React from "react";
-// import classes from "./Profile.module.scss";
 import ProfileInfo from "./ProfileInfo/ProfileInfo";
 import MyPostsContainer from "./MyPosts/MyPostsContainer";
-const Profile = (props) => {
+let Profile = props => {
   return (
-    <div >
+    <div>
       <ProfileInfo />
-      <MyPostsContainer
-         />
+      <MyPostsContainer />
     </div>
   );
 };

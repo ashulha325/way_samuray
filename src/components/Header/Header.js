@@ -4,10 +4,10 @@ const Header = () =>{
     return(
         <header className={classes.header}>
             <img
-                src="https://lh3.googleusercontent.com/proxy/50nDNRqNneGRXK5kZ97GZoKzpOjxlYcj7wpEGMzmiQSKR8clY82ozLIeoE2toAjInoY5URsw_3oMxWkw31PDbPFSclSqO31SkF3JPxPnMicpKA_4pqyI3sga2jz6iaHpatuXFZCfUNpQAnqzbc1FuUTiFHI"
-                alt=""
+                src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Oikya_Front_Logo.png"
+                alt="background-er"
             />
-            <span>Andriy Shulha -- social network</span>
+            <span>I'ts are beautiful social network</span>
         </header>
     );
 };
