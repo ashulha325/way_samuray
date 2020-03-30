@@ -3,17 +3,21 @@
   font-weight: bold;
 }
 .Users{
-display: flex;
-max-width:300px;
+  display: flex;
+  max-width:700px;
   justify-content: space-around;
   align-items: center;
+  border: 1px dashed red;
+  margin: 0 auto;
+  margin-top: 20px;
+  
   .UsersDetail{
-    margin-top: 20px;
+
     display: flex;
     flex-direction: column;
-    border:1px solid #ff0000;
+    margin-right: 20px;
     text-align: center;
-
+    align-items: center;
   }
 }
 .UsersDetailLocation{
@@ -21,5 +25,14 @@ max-width:300px;
   flex-direction: column;
 }
 .Photourl{
-  width:100px;
+width: 120px;
+  border-radius: 50%;
+}
+.photoCenter {
+  margin: 0 auto;
+  width: 175px;
+
+}
+.userDetailed{
+  max-width: 175px;
 }

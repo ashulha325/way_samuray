@@ -18,6 +18,8 @@ h3{
 
 }
 .app-wrapper-content{
+  display: flex;
+  align-items: center;
   grid-area: c;
   background-color: cornflowerblue;
 }
