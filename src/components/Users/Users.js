@@ -2,6 +2,8 @@ import React from "react";
 import classes from "./Users.module.scss";
 import userPhoto from "../../assets/images/user.jpg";
 import {NavLink} from "react-router-dom";
+import * as axios from "axios";
+import {usersAPI} from "../../api/api";
 
 let Users = props => {
   let pageCount = Math.ceil(props.totalUsersCounter / props.pageSize);
@@ -43,9 +45,13 @@ let Users = props => {
             </div>
 
             {user.followed ? (
-              <button onClick={() => props.unfollow(user.id)}>Unfollow!</button>
+              <button disabled={ props.followingInProgress} onClick={() => {
+                    props.unfollowThunkCreator(user.id)
+              }}>Unfollow!</button>
             ) : (
-              <button onClick={() => props.follow(user.id)}> Follow! </button>
+              <button disabled={props.followingInProgress} onClick={() =>{
+                  props.followThunkCreator(user.id)
+              }}> Follow! </button>
             )}
           </div>
           <div className={classes.UsersDetailLocation}>

@@ -1,19 +1,22 @@
 import React from "react";
-import  classes from "./Header.module.scss";
-import {NavLink} from "react-router-dom";
+import Header from "./Header";
+import * as axios from "axios";
+import { connect } from "react-redux";
+import { authThunkCreator, setAuthUserData } from "../../redux/auth-reducer";
+class HeaderContainer extends React.Component {
+  componentDidMount() {
+    this.props.authThunkCreator();
+  }
+  render() {
+    return <Header {...this.props} />;
+  }
+}
+const mapStateToProps = state => ({
+  isAuth: state.auth.isAuth,
+  login: state.auth.login
+});
 
-const Header = () =>{
-    return(
-        <header className={classes.header}>
-            <img
-                src="https://upload.wikimedia.org/wikipedia/commons/a/ac/Oikya_Front_Logo.png"
-                alt="background-er"
-            />
-            <span>I'ts are beautiful social network</span>
-            <div className={classes.loginBlock}>
-                <NavLink to={"/login"}>Login</NavLink>
-            </div>
-        </header>
-    );
-};
-export  default  Header;
+export default connect(mapStateToProps, {
+  setAuthUserData,
+  authThunkCreator
+})(HeaderContainer);

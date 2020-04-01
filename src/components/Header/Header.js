@@ -1,6 +1,8 @@
 import React from "react";
 import  classes from "./Header.module.scss";
-const Header = () =>{
+import {NavLink} from "react-router-dom";
+
+const Header = (props) =>{
     return(
         <header className={classes.header}>
             <img
@@ -8,6 +10,12 @@ const Header = () =>{
                 alt="background-er"
             />
             <span>I'ts are beautiful social network</span>
+            <div className={classes.loginBlock}>
+                {props.isAuth ? props.login :
+                    <NavLink to={"/login"}>Login</NavLink>
+                }
+
+            </div>
         </header>
     );
 };
